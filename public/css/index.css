@@ -1,0 +1,720 @@
+@import url('https://fonts.cdnfonts.com/css/baloo-da');
+
+* {
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #5391a8;
+    --secondary-color: #824242;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+    --gradiant-color: linear-gradient(90deg, #5c0404 0%, #5c2424 100%);
+    --main-border-color: #091585;
+}
+
+[data-theme="dark"] {
+    --primary-color: #3D8DAF;
+    --secondary-color: #824242;
+    --font-color: #424242;
+    --bg-color: #C8C8C8;
+    --heading-color: #292922;
+    --gradiant-color: linear-gradient(90deg, #532222 0%, #712020 100%);
+    --main-border-color: red;
+}
+
+[data-theme="pink"] {
+    --primary-color: #3D2B71;
+    --secondary-color: #2D7128;
+    --font-color: #b15699;
+    --bg-color: #d99acd;
+    --heading-color: #4f78c4;
+    --gradiant-color: linear-gradient(90deg, #891574 0%, #70265c 100%);
+    --main-border-color: #548ca9;
+}
+
+[data-theme="green"] {
+    --primary-color: #2A6F96;
+    --secondary-color: #712C22;
+    --font-color: #063810;
+    --bg-color: #06b44e;
+    --heading-color: #096d08;
+    --gradiant-color: linear-gradient(90deg, #15894f 0%, #26703f 100%);
+    --main-border-color: #a9eb4c;
+}
+
+[data-theme="dark-green"] {
+    --primary-color: #3b6b3b;
+    --secondary-color: #306e33;
+    --font-color: #1f702f;
+    --bg-color: #1c3d28;
+    --heading-color: #3c9c3a;
+    --gradiant-color: linear-gradient(90deg, #15894f 0%, #26703f 100%);
+    --main-border-color: #377e40;
+}
+
+
+html {
+  background-color: var(--bg-color);
+}
+.svg-settings {
+    height: 30px;
+    width: 30px;
+    float: left;
+}
+.svg-info {
+    height: 30px;
+    width: 30px;
+    float: right;
+}
+
+.svg-disc {
+    height: 60px;
+    width: 60px;
+    float: right;
+}
+
+
+.setting-nav {
+    display: flex;
+    font-family: 'Baloo Da';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 15px;
+/* identical to box height */
+
+float: left;
+text-align: center;
+
+color: #FFFFFF;
+padding: 10px;
+}
+
+.info-nav {
+    display: flex;
+    font-family: 'Baloo Da';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 15px;
+/* identical to box height */
+
+float: left;
+text-align: center;
+
+color: #FFFFFF;
+float: right;
+padding: 10px;
+}
+
+.time-nav {
+    display: flex;
+    font-family: 'Baloo Da';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 15px;
+margin-left: 55px;
+/* identical to box height */
+
+float: left;
+text-align: center;
+
+color: #FFFFFF;
+padding: 10px;
+}
+
+.navigation {
+    box-sizing: border-box;
+    
+    top: 3%;
+    height: 75px;
+    width: 874px;
+
+    background: var(--secondary-color);
+    border: 3px solid #000000;
+    box-shadow: 10px 9px 4px 5px rgba(10, 5, 75, 0.25);
+    float: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-wrap {
+    float: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--bg-color);
+}
+
+.sidebar-1 {
+    width: 246px;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+.sidebar-2 {
+    width: 246px;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+.align-prop {
+    display: flex;
+    float: left;
+    justify-content: left;
+
+}
+
+.align-prop-1 {
+    display: flex;
+    float: right;
+    justify-content: right;
+
+}
+
+.center-main {
+    display: flex;
+    float: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.center-main.side-title {
+    font-family: 'Baloo Da';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+/* identical to box height */
+
+text-align: center;
+text-decoration-line: underline;
+text-transform: uppercase;
+color: var(--bg-color);
+}
+
+.side-text {
+    font-family: 'Baloo Da';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+/* identical to box height */
+
+text-align: center;
+text-decoration-line: underline;
+
+color: var(--bg-color);
+}
+
+.github-logo {
+    height: 60px;
+    width: 60px;
+    color: black;
+    filter: drop-shadow(8px 10px 4px rgba(1, 77, 9, 0.25));
+}
+
+.github-text {
+    font-family: 'Baloo Da';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+padding: 2px;
+/* identical to box height */
+
+text-align: center;
+
+color: var(--bg-color);
+
+}
+
+.github-box {
+    border: 5px solid #000000;
+}
+
+.gba-emu-tile {
+    width: 600px;
+    height: 70px;
+    background: #6BA263;
+    border: 3px solid #000000;
+}
+
+
+.gba-tile-wrap {
+    display: table;
+  margin: 0 auto;
+}
+
+
+.nes-emu-tile {
+    width: 600px;
+    height: 70px;
+    background: #B54C4C;
+    border: 3px solid #000000;
+}
+
+.snes-emu-tile {
+    width: 600px;
+    height: 70px;
+    background: #e0882a;
+    border: 3px solid #000000;
+}
+
+
+.wrapper-tile-1 {
+	width:100%;
+	margin-bottom: 1%;
+}
+
+.tile-text {
+    font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+text-align: center;
+color: #000000;
+text-decoration: underline;
+}
+
+.display-wrapper-1 .gba-tile-wrap {
+
+    clear: none;
+}
+.gba-tile-wrap {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gba-emu-tile-1 {
+    width: 600px;
+    height: 70px;
+    background: #6BA263;
+    border: 3px solid #000000;
+    filter: drop-shadow(8px 10px 4px rgba(1, 77, 9, 0.25));
+}
+
+
+.gba-tile-wrap-1 {
+}
+
+h1 {
+    color: var(--heading-color);
+}
+main {
+   
+    background: var(--background-color);
+        }
+    html {
+        text-align: center;
+        scroll-behavior: smooth;
+    }
+body {
+    font-family: sans-serif;
+     background: var(--bg-color);
+     color: var(--font-color);
+    }
+li {
+    font-size: 16px;
+    padding: 10px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nes-emu-tile {
+    width: 600px;
+    height: 70px;
+    background: #B54C4C;
+    border: 3px solid #000000;
+    filter: drop-shadow(8px 10px 4px rgba(126, 13, 13, 0.25));
+
+}
+
+.sega-emu-tile-1 {
+    width: 600px;
+    height: 70px;
+    background: #6480AB;
+    border: 3px solid #000000;
+    filter: drop-shadow(8px 10px 4px rgba(14, 35, 107, 0.25));
+}
+
+.more-emu-tile {
+    width: 600px;
+    height: 70px;
+    background: #BACF64;
+    border: 3px solid #000000;  
+    filter: drop-shadow(8px 10px 4px rgba(136, 138, 22, 0.25));
+}
+
+
+.wrapper-tile {
+	width:100%;
+}
+
+.tile-text-1 {
+    font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+text-align: center;
+color: #000000;
+text-decoration: underline;
+}
+
+.center-please {
+    padding: 20px;
+    float: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .center-please {
+        margin: auto;
+        width: 50%;
+        padding-left: 100px;
+    }
+    body {
+        color: red;
+    }
+    .center-main.side-title {
+        font-family: 'Baloo Da';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    /* identical to box height */
+    
+    text-align: center;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: var(--bg-color)
+    }
+    .setting-nav {
+        display: flex;
+        font-family: 'Baloo Da';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    float: left;
+    text-align: center;
+    
+    color: #FFFFFF;
+    padding: 10px;
+    }
+    
+    .info-nav {
+        display: flex;
+        font-family: 'Baloo Da';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    float: left;
+    text-align: center;
+    
+    color: #FFFFFF;
+    float: right;
+    padding: 10px;
+    }
+    .gba-emu-tile-1 {
+        width: 350px;
+        height: 40px;
+        background: #6BA263;
+        border: 3px solid #000000;
+        filter: drop-shadow(8px 10px 4px rgba(1, 77, 9, 0.25));
+    }
+    
+    
+    .nes-emu-tile {
+        width: 350px;
+        height: 40px;
+        background: #B54C4C;
+        border: 3px solid #000000;
+        filter: drop-shadow(8px 10px 4px rgba(126, 13, 13, 0.25));
+    
+    }
+    
+    .sega-emu-tile-1 {
+        width: 350px;
+        height: 40px;
+        background: #6480AB;
+        border: 3px solid #000000;
+        filter: drop-shadow(8px 10px 4px rgba(14, 35, 107, 0.25));
+    }
+    
+    .more-emu-tile {
+        width: 350px;
+        height: 40px;
+        background: #BACF64;
+        border: 3px solid #000000; 
+        filter: drop-shadow(8px 10px 4px rgba(136, 138, 22, 0.25)); 
+    }
+
+    .gba-emu-tile {
+        width: 350px;
+        height: 40px;
+        background: #6BA263;
+        border: 3px solid #000000;
+        filter: drop-shadow(8px 10px 4px rgba(1, 77, 9, 0.25));
+    }
+    
+    
+    .nes-emu-tile {
+        width: 350px;
+        height: 40px;
+        background: #B54C4C;
+        border: 3px solid #000000;
+        filter: drop-shadow(8px 10px 4px rgba(126, 13, 13, 0.25));
+    }
+
+    .tile-text-1 {
+        font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #000000;
+    text-decoration: underline;
+    }
+    .tile-text {
+        font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #000000;
+    text-decoration: underline;
+    }
+    .wrapper-tile {
+        float: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 8%;
+    }
+    .wrapper-tile-1 {
+        float: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 8%;
+        margin-bottom: 3%;
+    }
+  }
+
+
+.register-real {
+    width: 200px;
+    height: 50px;
+    background: var(--secondary-color);
+    border: 3px solid #000000;
+    font-family: 'Baloo Da';
+    cursor: pointer;
+    color: var(--heading-color);
+}
+
+.register-real:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    /* good enough */
+}
+
+.register-button {
+    padding-right: 75px;
+}
+
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+  .content-wrap {
+    position: relative;
+  }
+
+
+  .center {
+    float: center;
+    text-align: center;
+    justify-content: center;
+  }
+/* Tiles */
+  .column-4 {
+    float: left;
+    width: 21%;
+    padding: 10px;
+    margin:20px;
+    margin-bottom: 50px;
+    height: 250px;
+  }
+
+
+/* Tile Content */
+  .project-1 { /* ctr 1 */
+    background: url('../images/ctr1.png');
+    background-size: cover;
+    border-radius: 5%;
+  }
+  
+  .project-2 { /* ctr 2 */
+    background: url('../images/ctrtt.png');
+    background-size: cover;
+    border-radius: 5%;
+    }
+  
+  .project-3 { /* dino game */
+    background: url('../images/dino.jpg');
+    background-size: cover;
+    border-radius: 5%;
+    }
+  
+  .project-4 { /* slope game */
+    background: url('../images/slope-game.jpg');
+    background-size: cover;
+    border-radius: 5%;
+    }
+  
+  .project-5 { /* cookie game */
+    background: url('../images/cookie.png');
+    background-size: cover;
+    border-radius: 5%;
+    }
+  
+  .project-6 { /* deal or no deal game */
+    background: url('../images/dealorno.jpg');
+    background-size: cover;
+    border-radius: 5%;
+    }
+  
+  .project-7 {
+    background: url('../images/duckl.png');
+    background-size: cover;
+    border-radius: 5%;
+    }
+  
+  .project-8 {
+    background: url('../images/minec.png');
+    background-size: cover;
+    border-radius: 5%;
+    }
+
+.project-9 {
+      background: url('../images/Idle-Dice.jpg');
+      background-size: cover;
+      border-radius: 5%;
+      }
+.project-10 {
+      background: url('../images/impossq.png');
+      background-size: cover;
+      border-radius: 5%;
+      }
+.project-11 {
+      background: url('../images/superhot.jpg');
+      background-size: cover;
+      border-radius: 5%;
+}
+.project-12 {
+  background: url('../images/flappy20.png');
+  background-size: cover;
+  border-radius: 5%;
+}
+.project-13 {
+  background: url('../images/msfs1jpg.jpg');
+  background-size: cover;
+  border-radius: 5%;
+}
+.project-14 {
+  background: url('../images/wordle.png');
+  background-size: cover;
+  border-radius: 5%;
+}
+.project-15 {
+  background: url('../g_mes/paperclips/paperclips/Universal_Paperclips_files/mobile-title.png');
+  background-size: cover;
+  border-radius: 5%;
+}
+.project-16 {
+  background: url('../images/lilalch2.svg');
+  background-size: cover;
+  border-radius: 5%;
+}
+  
+
+  /* Blur-zoom Container */
+.img-hover-zoom--blur {
+    transition: transform 0.1s, filter 0.1s ease-in-out;
+    filter: blur(0.5px);
+    transform: scale(1.01);
+  }
+  
+  /* The Transformation */
+  .img-hover-zoom--blur:hover {
+    filter: blur(0);
+    transform: scale(1);
+  }
+
+  .star {
+    align-items: center;
+    width: 20px;
+  }
+
+  .project-text-1 {
+    font-size:20px;
+    color: #fff6d6;
+    text-align: center !important;
+    margin-top: 200px !important;
+    background: rgb(0, 0, 0) !important; /* Fallback color */
+  background: rgba(0, 0, 0, 0.5) !important; /* Black background with 0.5 opacity */
+  width: 100% !important; /* Full width */
+  padding: 20px !important; /* Some padding */
+  border-radius: 3%;
+  }
+
+
+  .filter {
+    float: right;
+    margin-right: 5px;
+  }
+
+
+  .projects-1 {
+    background: url('../folders/lib/assets/og-default-image.jpeg');
+    background-color:#F9F7F7;
+    border-radius: 5%;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .projects-2 {
+    background: url('../images/GameBoyAdvance_Logo.png');
+    background-color: #f9f7f7;
+    border-radius: 5%;
+    background-position: center;
+    background-size: contain;
+  } 
+
+
+li {
+    list-style-type: none;
+}
