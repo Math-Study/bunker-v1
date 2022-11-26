@@ -575,11 +575,12 @@ text-decoration: underline;
     min-inline-size: 100%;
     margin: 0;
     box-sizing: border-box;
-    display: grid;
     place-content: center;
     font-family: system-ui, sans-serif;
   }
-  
+  body {
+    display: grid;
+  }
   @media (orientation: landscape) {
     body {
       grid-auto-flow: column;
@@ -684,4 +685,9 @@ text-decoration: underline;
     background: #D76A03;
     z-index: -1;
     transition: transform .3s ease;
+  }
+
+
+  .content-wrap {
+    position: relative;
   }
