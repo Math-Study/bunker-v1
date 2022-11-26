@@ -1,0 +1,172 @@
+:root {
+    --primary-color: #5391a8;
+    --secondary-color: #824242;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+    --gradiant-color: linear-gradient(90deg, #5c0404 0%, #5c2424 100%);
+    --main-border-color: #091585;
+}
+
+[data-theme="dark"] {
+    --primary-color: #3D8DAF;
+    --secondary-color: #824242;
+    --font-color: #424242;
+    --bg-color: #C8C8C8;
+    --heading-color: #292922;
+    --gradiant-color: linear-gradient(90deg, #532222 0%, #712020 100%);
+    --main-border-color: red;
+}
+
+[data-theme="pink"] {
+    --primary-color: #24428a;
+    --secondary-color: #262278;
+    --font-color: #b15699;
+    --bg-color: #d99acd;
+    --heading-color: #4f78c4;
+    --gradiant-color: linear-gradient(90deg, #891574 0%, #70265c 100%);
+    --main-border-color: #548ca9;
+}
+
+[data-theme="green"] {
+    --primary-color: #096d08;
+    --secondary-color: #0a9e66;
+    --font-color: #063810;
+    --bg-color: #06b44e;
+    --heading-color: #096d08;
+    --gradiant-color: linear-gradient(90deg, #15894f 0%, #26703f 100%);
+    --main-border-color: #a9eb4c;
+}
+
+[data-theme="dark-green"] {
+    --primary-color: #3b6b3b;
+    --secondary-color: #306e33;
+    --font-color: #1f702f;
+    --bg-color: #1c3d28;
+    --heading-color: #3c9c3a;
+    --gradiant-color: linear-gradient(90deg, #15894f 0%, #26703f 100%);
+    --main-border-color: #377e40;
+}
+[data-theme="black-white"] {
+    --primary-color: #fff;
+    --secondary-color: #000000;
+    --font-color: #ffffff;
+    --bg-color: #000;
+    --heading-color: #ffffff;
+    --gradiant-color: linear-gradient(90deg, #fdfdfd 0%, #000000 100%);
+    --main-border-color: #ffffff;
+}
+[data-theme="blue-pink"] {
+    --primary-color: #2F3C7E;
+    --secondary-color: #2F3C7E;
+    --font-color: #2F3C7E;
+    --bg-color: #FBEAEB;
+    --heading-color: #2F3C7E;
+    --gradiant-color: linear-gradient(90deg, #FBEAEB 0%, #2F3C7E 100%);
+    --main-border-color: #2F3C7E;
+}
+[data-theme="charcoal-yellow"] {
+    --primary-color: #101820FF;
+    --secondary-color: #101820FF;
+    --font-color: #101820FF;
+    --bg-color: #FEE715FF;
+    --heading-color: #101820FF;
+    --gradiant-color: linear-gradient(90deg, #FEE715FF 0%, #101820FF 100%);
+    --main-border-color: #101820FF;
+}
+[data-theme="hotpink-cyan"] {
+    --primary-color: #FF69B4;
+    --secondary-color: #FF69B4;
+    --font-color: #FF69B4;
+    --bg-color: #00FFFF;
+    --heading-color: #FF69B4;
+    --gradiant-color: linear-gradient(90deg, #FEE715FF 0%, #00FFFF 100%);
+    --main-border-color: #FF69B4;
+}
+
+.light-theme-container {
+    background-color: rgb(200, 200, 200);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.light-theme-content {
+    color: #292922;
+}
+
+
+.dark-theme-container {
+    background-color: #161625;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.dark-theme-content {
+    color: #818cab;
+}
+
+.pink-theme-container {
+    background-color: #d99acd;
+    padding: 20px;
+    border-radius: 20px;
+}
+.swap-settings-container {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.swap-settings-content {
+    color: #818cab;
+}
+
+.pink-theme-content {
+    color: #cb55b9;
+}
+
+.green-theme-container {
+    background-color: #06b44e;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.green-theme-content {
+    color: #096d08;
+}
+.dark-green-theme-container {
+    background-color: #1c3d28;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.dark-green-theme-content {
+    color: #096d08;
+}
+
+.collapsible-theme {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    border-radius: 20px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible-theme:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .custom-theme-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    color: var(--bg-color)
+  }
