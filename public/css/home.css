@@ -538,26 +538,27 @@ text-decoration: underline;
 }
 
 
-h1::before {  
+.title-stripe::before {  
     transform: scaleX(0);
     transform-origin: bottom right;
   }
   
-  h1:hover::before {
+  .title-stripe:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
   
-  h1::before {
+  .title-stripe::before {
     content: " ";
     display: block;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     inset: 0 0 0 0;
-    background: hsl(200 100% 80%);
+    background: #CC2936;
     z-index: -1;
     transition: transform .3s ease;
   }
+
   
   h1 {
     position: relative;
@@ -600,3 +601,87 @@ h1::before {
         opacity: 1;
      }
 }
+
+.first-stripe::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .first-stripe:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .first-stripe::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #AA4465;
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+
+  .second-stripe::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .second-stripe:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .second-stripe::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #D4E09B;
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+
+  .third-stripe::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .third-stripe:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .third-stripe::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #51344D;
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+
+  .fourth-stripe::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .fourth-stripe:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .fourth-stripe::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #D76A03;
+    z-index: -1;
+    transition: transform .3s ease;
+  }
