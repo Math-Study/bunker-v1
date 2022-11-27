@@ -550,7 +550,9 @@ text-decoration: underline;
      }
 }
   .content-wrap {
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
 
 
@@ -718,3 +720,30 @@ text-decoration: underline;
 li {
     list-style-type: none;
 }
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    z-index: 9999;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 50px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 20%;
+  }

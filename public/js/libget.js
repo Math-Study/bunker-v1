@@ -48,5 +48,5 @@ function triggerDisc() {
 }
 
 function triggerSave() {
-    window.top.location.href = "../saves.html";
+    window.top.location.href = "library.html";
 }
