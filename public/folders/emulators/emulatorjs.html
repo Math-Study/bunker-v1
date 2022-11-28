@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>EmulatorJS</title>
+       <link rel="stylesheet" href="../../css/index.css">  
+       <link rel="stylesheet" href="../../css/themes.css">  
+        <style>
+            body, html {
+                height: 100%;
+            }
+
+            body {
+                font-family: monospace;
+                font-weight: bold;
+                font-size: 20px;
+                margin: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="gameplayer-2">
+            <div id='game'></div>
+            <input type="file">
+        </div>
+        
+       <!--<script type='text/javascript'>
+        
+            window.gameData = gameData;
+            EJS_player = '#game';
+            EJS_core = "gba";
+            EJS_color = "#de4587";
+            EJS_gameUrl = URL.createObjectURL(new Blob([Uint8Array.from(window.gameData)]));
+            
+            /*
+             *  Path to the WASM / JS files
+             *  HAS TO BE in the same directory.
+             */
+            
+            EJS_pathtodata = "https://rawcdn.githack.com/EmulatorJS/EmulatorJS/main/data/";
+            
+        </script>--> 
+        <script src="../../js/convert.js"></script>
+    </body>
+</html>
