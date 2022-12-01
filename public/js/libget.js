@@ -3,7 +3,7 @@ var localGamesArray = [];
 let gameType = "";
 let emulatorCheck = true;
 let emulatorState = "";
-
+//Checks to see if user has emulator installed (we may scrap and include emu in base with bunkerPlay)
 if (emulatorCheck === null) {
     emulatorState = "../emulators/false.html";
     console.log("Set emulator check to false")
@@ -14,7 +14,7 @@ if (emulatorCheck === null) {
     emulatorState = "../emulators/false.html";
     console.log("Emulator check is false")
 }
-
+//checks if user has games in library
 if (localStorage.getItem("localGames") === null) {
     console.log("No local games found, creating new array");
   }
@@ -25,6 +25,7 @@ if (localStorage.getItem("localGames") === null) {
         console.log("Local games found, loading array");
         modalWait();
     }
+//Creates array from library list (i10 you may change this if you'd like)
 let i = document.querySelector('input').addEventListener('change', (e)=>{
     const files = e.target.files;
   const fileNames = [...files].map((file) => file.name);
@@ -42,7 +43,7 @@ localStorage.setItem("localGames", JSON.stringify(document.getElementById("libCo
 modalWait();
   })
 
-
+//Gets ID when you click on any element for dev purposes you may remove
 function getId() {
     let gameId = null;
     document.addEventListener('click', function(e) {
@@ -53,7 +54,7 @@ function getId() {
     
 }
 getId();
-  
+//Assigns game-type to last item clicked (Sent to emulator to change core)
 function getLib(id) {
     let gameName = document.getElementById(id);
 
@@ -73,7 +74,7 @@ function getLib(id) {
     }
     
 }
-
+// Triggers home even when iframed
 function triggerHome() {
     window.top.location.href = "../../index.html"; 
 }
@@ -88,7 +89,7 @@ function triggerDisc() {
 function triggerSave() {
     window.top.location.href = "library.html";
 }
-
+// NOT FINISHED was thinking about having a modal popup for library stuff but u can remove since bunkerConverter works
 function modalWait() {
 // Get the modal
 var modal = document.getElementById("myModal");
