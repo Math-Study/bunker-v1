@@ -3,6 +3,7 @@ let onlineStatus = JSON.parse(onlineStatusDat);
 let notesFrame = document.getElementById("notes");
 let hideAll = document.getElementById("hide-all");
 
+//hides offline page if user is online
 if (onlineStatus == true) {
     document.querySelectorAll( "body *:not( #notes )" )
     .forEach( ( v ) => {
@@ -14,4 +15,4 @@ if (onlineStatus == true) {
 if (onlineStatus == false) {
     notesFrame.style.display = "none";
 }
-
+//otherwise shows offline page

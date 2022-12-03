@@ -1,5 +1,6 @@
 const toggleState = 1;
 
+//set themes if they change it
 function themeValue(toggleState) {
     if (toggleState == 1) {
         document.documentElement.setAttribute('data-theme', 'light');

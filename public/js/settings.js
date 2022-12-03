@@ -2,7 +2,7 @@ let input = document.getElementById("startup");
 let startupVal = document.getElementById("startupVal");
 let inputDat = localStorage.getItem("startup");
 
-
+//Check for startup page
 if (inputDat == null) {
     console.log("No startup value found");
 } else {

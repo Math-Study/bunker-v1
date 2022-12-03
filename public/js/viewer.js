@@ -2,6 +2,7 @@ let viewer = document.getElementById("viewer");
 let searchBar = document.getElementById("searchBar");
 let startup = localStorage.getItem("startup");
 
+//load startup site
 if (startup == null) {
     console.log("No startup value found");
 } else {
