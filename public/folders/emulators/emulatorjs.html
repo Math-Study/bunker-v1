@@ -2,8 +2,6 @@
 <html>
     <head>
        <title>EmulatorJS</title>
-       <link rel="stylesheet" href="../../css/index.css">  
-       <link rel="stylesheet" href="../../css/themes.css">  
         <style>
             body, html {
                 height: 100%;
@@ -19,21 +17,11 @@
     </head>
 
     <body>
-        <div class="gameplayer-2">
             <div id='game'></div>
-            <input type="file">
-        </div>
+           
         <script src="../../js/convert.js"></script>
-       <script type='text/javascript'>
-        
-            window.gameData = gameData;
-            EJS_player = '#game';
-            EJS_core = "gba";
-            EJS_color = "#de4587";
-            EJS_gameUrl = URL.createObjectURL(new Blob([Uint8Array.from(window.gameData)]));
-            EJS_pathtodata = "https://rawcdn.githack.com/EmulatorJS/EmulatorJS/main/data/";
-            
-        </script>
+        <script src="../../my-lib/PokemonSaph.js"></script>
+        <script src="https://rawcdn.githack.com/EmulatorJS/EmulatorJS/main/data/loader.js"></script>
         
     </body>
 </html>
