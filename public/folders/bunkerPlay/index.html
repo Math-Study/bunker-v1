@@ -1,0 +1,54 @@
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"
+	integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI"
+	crossorigin="anonymous"></script>
+<img src="" id="frame">
+<pre id="user"></pre>
+<button onclick="register();">connect to game</button>
+<pre id="msgs">
+
+
+
+<!-- This doesn't work at all just stuck it in here because L i10-->
+</pre>
+<input type="horrible" id="monkey">
+
+<script>
+	var socket = io("https://market-dppep.run-us-west2.goorm.io/");
+	function register() {
+		socket.emit("mode", {
+			"type": "player"
+		});
+	}
+	socket.on("screen", function (s) {
+		document.getElementById("frame").src = s;
+	});
+	socket.on("mode", function (m) {
+		document.getElementById("user").textContent = m.message;
+	});
+	document.addEventListener("keydown", function (event) {
+		socket.emit("keypress", {
+			type: "keydown",
+			code: event.keyCode
+		})
+	});
+	document.addEventListener("keyup", function (event) {
+		socket.emit("keypress", {
+			type: "keyup",
+			code: event.keyCode
+		});
+	});
+	document.getElementById("monkey").addEventListener("keydown", function (e) {
+		if (e.key == "Enter" && document.getElementById("monkey").value != "" && document.getElementById("monkey").value.length < 255) {
+			socket.emit("message", document.getElementById("monkey").value);
+			document.getElementById("monkey").value = "";
+		}
+		e.stopImmediatePropagation()
+	});
+	socket.on("message", function (msg) {
+		let mgs = document.getElementById("msgs").textContent.split("\n");
+		mgs.shift();
+		mgs.push(msg);
+		mgs = mgs.join("\n");
+		document.getElementById("msgs").textContent = mgs;
+	});
+</script>
