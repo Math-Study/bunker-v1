@@ -38,7 +38,74 @@
     </nav>
 <div class="content-wrap"> <h2 id="status" class="online-status"> Online Status: Online </h2> </div>
 
-<input type="file" webkitdirectory="" directory="">
+	<pre id="info">Click the button to import your game library!</pre>
+  <pre>Warining, this will take a lot of space on your device! All binary files will end up about 3x their current size, please delete the old binary files after you imported your library.</pre>
+	<button onclick="bingle();">click me pls</button>
+	<script>
+		async function* getFilesRecursively(entry) {
+			if (entry.kind === 'file') {
+				const file = await entry.getFile();
+				if (file !== null) {
+					//file.relativePath = getRelativePath(entry);
+					yield file;
+				}
+			} else if (entry.kind === 'directory') {
+				for await (const handle of entry.values()) {
+					yield* getFilesRecursively(handle);
+				}
+			}
+		}
+
+		async function bingle() {
+			try {
+				const d = await window.showDirectoryPicker({
+					startIn: "downloads"
+				});
+				for await (const fileHandle of getFilesRecursively(d)) {
+					console.log(fileHandle);
+					if (fileHandle.size < 90000000) {
+						let f = await fileHandle.text();
+						f = window.btoa(unescape(encodeURIComponent(f)));
+						let js = `globalGameIntercept.register("${fileHandle.name}", \`${f}\`);`;
+						let name = fileHandle.name.split(".");
+						name[name.length - 1] = "js";
+						name = name.join(".");
+						const cm = await d.getFileHandle(name, {create: true});
+						const cmf = await cm.createWritable();
+						await cmf.write(js);
+						await cmf.close();
+					} else {
+						console.log(fileHandle.name + " too big");
+					}
+
+				}
+				//path should be local to the picked folder
+				//do file processing
+				for (let i in updated) {
+					let name = i.split(".");
+					name[name.length - 1] = "js";
+					name = name.join(".");
+					const cm = await d.getFileHandle(name, {create: true});
+					const cmf = await cm.createWritable();
+					await cmf.write(updated[i]); //content
+					await cmf.close();
+				}
+				throw "success, check the directory for new .js files";
+			} catch (e) {
+				//kaboom
+				document.getElementById("info").textContent = e;
+			}
+		}
+
+		//encode
+		/*
+  //wrong use atob(f);
+		let f = "dataFromRegister";
+		let nf = new Uint8Array.from(f.split("x"));
+		//coder.encodeInto(f, f.split("x"));
+		console.log(nf.length);
+			*/
+	</script>
 
 <h1> Game Library </h1>
 <div id="libContainer">
