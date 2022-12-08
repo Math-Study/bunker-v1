@@ -11,7 +11,7 @@ window.globalGameIntercept = {};
             EJS_DEBUG_XX = true;
             EJS_gameName = 'advancewars';
             EJS_color = "#de4587";
-            EJS_pathtodata = "https://rawcdn.githack.com/EmulatorJS/EmulatorJS/main/data/";
+            EJS_pathtodata = "https://cattn.github.io/gba/data/";
             EJS_gameUrl = URL.createObjectURL(new Blob([Uint8Array.from(window.gameData)]));
             console.log(bin);
             /* var fileName = "myfile.json";
