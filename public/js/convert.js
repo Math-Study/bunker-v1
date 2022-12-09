@@ -15,18 +15,5 @@ window.globalGameIntercept = {};
         EJS_pathtodata = "https://rawcdn.githack.com/EmulatorJS/EmulatorJS/main/data/";
         EJS_gameUrl = URL.createObjectURL(new Blob([Uint8Array.from(window.gameData)]));
         console.log(bin);
-        
-        
-        
-        //let bin = JSON.stringify(bol); // JSON.stringify(Array.from(new Uint8Array(await (new Blob([file])).arrayBuffer()))); this is what I am given by ethan
-        /* var fileName = "myfile.json";
-        var fileContent = bin;
-var myFile = new Blob([fileContent], {type: 'json/json'});
-
-window.URL = window.URL || window.webkitURL;
-var dlBtn = document.getElementById("download");
-
-dlBtn.setAttribute("href", window.URL.createObjectURL(myFile));
-dlBtn.setAttribute("download", fileName);*/
     }
         
