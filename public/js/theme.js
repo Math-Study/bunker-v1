@@ -1,5 +1,6 @@
 const toggleState = 1;
-
+let key = 0;
+let userSrc = "https://docutyper.com/doc?topic=Cat";
 //set themes if they change it
 function themeValue(toggleState) {
     if (toggleState == 1) {
@@ -50,3 +51,32 @@ localStorage.setItem('theme', 'hotpink-cyan');
 
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 document.documentElement.setAttribute('data-theme', currentTheme);
+
+
+document.onkeyup = function(e) {
+if (e.ctrlKey && e.shiftKey && e.which == 72) {
+  console.log("key is 0")
+  if (key == 2) {
+    document.body.removeChild(document.body.lastChild);
+    key = 0;
+  }else {
+    key = 1;
+    console.log("key is 1");
+  }
+  if (key == 1) {
+    console.log("key is 1");
+    var ifrm = document.createElement("iframe");
+  ifrm.setAttribute("src", userSrc);
+  ifrm.style.width = "100%";
+  ifrm.style.height = "100%";
+  ifrm.style.zIndex = "999999";
+  ifrm.style.position = "fixed";
+  ifrm.style.top = "0";
+  ifrm.style.left = "0";
+  ifrm.style.border = "none";
+  document.body.appendChild(ifrm);
+  key = 2;
+  } 
+}
+};
+
