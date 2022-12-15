@@ -11,26 +11,35 @@ jobs:
             const fs = require('fs')
             var path = require('path');
             var walk = function(dir, done) {
-              var results = [];
-              fs.readdir(dir, function(err, list) {
+                var results = [];
+                fs.readdir(dir, function(err, list) {
                 if (err) return done(err);
                 var i = 0;
                 (function next() {
-                  var file = list[i++];
-                  if (!file) return done(null, results);
-                  file = path.resolve(dir, file);
-                  fs.stat(file, function(err, stat) {
+                    var file = list[i++];
+                    if (!file) return done(null, results);
+                    file = path.resolve(dir, file);
+                    fs.stat(file, function(err, stat) {
                     if (stat && stat.isDirectory()) {
-                      walk(file, function(err, res) {
+                        walk(file, function(err, res) {
                         results = results.concat(res);
                         next();
-                      });
+                        });
                     } else {
-                      results.push(file);
-                      next();
+                        results.push(file);
+                        next();
                     }
-                  });
+                    });
                 })();
-              });
+                });
             };
-            walk(path.join(process.env.GITHUB_WORKSPACE, "public"), console.log);
+            function compilation(n, files){
+                let file = {};
+                for(let i in files){
+                    let d = fs.readFileSync(files[i], "utf-8");
+                    d = Buffer.from(d, 'utf-8').toString('base64');
+                    file[i.split("bunker-v1/public/")[1]] = d;
+                }
+                fs.writeFileSync(path.join(process.env.GITHUB_WORKSPACE, "update.js"), JSON.stringify(d));
+            }
+            walk(path.join(process.env.GITHUB_WORKSPACE, "public"), compilation);
