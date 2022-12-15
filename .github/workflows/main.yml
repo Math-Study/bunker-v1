@@ -41,5 +41,8 @@ jobs:
                     file[i.split("bunker-v1/public/")[1]] = d;
                 }
                 fs.writeFileSync(path.join(process.env.GITHUB_WORKSPACE, "update.js"), JSON.stringify(file));
+                exec("git add "+path.join(process.env.GITHUB_WORKSPACE, "update.js"));
+                exec("git commit");
+                exec("git push");
             }
             walk(path.join(process.env.GITHUB_WORKSPACE, "public"), compilation);
