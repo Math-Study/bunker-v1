@@ -10,7 +10,7 @@ jobs:
           script: |
             const fs = require('fs')
             var path = require('path');
-            const exec = require('child_process').execSync;
+            const execSync = require('child_process').execSync;
             var walk = function(dir, done) {
                 var results = [];
                 fs.readdir(dir, function(err, list) {
@@ -42,8 +42,8 @@ jobs:
                     file[i.split("bunker-v1/public/")[1]] = d;
                 }
                 fs.writeFileSync(path.join(process.env.GITHUB_WORKSPACE, "update.js"), JSON.stringify(file));
-                exec("git add "+path.join(process.env.GITHUB_WORKSPACE, "update.js"));
-                exec("git commit");
-                exec("git push");
+                execSync("git add "+path.join(process.env.GITHUB_WORKSPACE, "update.js"));
+                execSync("git commit");
+                execSync("git push");
             }
             walk(path.join(process.env.GITHUB_WORKSPACE, "public"), compilation);
