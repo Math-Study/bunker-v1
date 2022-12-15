@@ -4,5 +4,5 @@ jobs:
   exist:
     runs-on: ubuntu-latest
     steps:
-      - run: cd ../ && tree
+      - run: cd ../../ && tree
         
