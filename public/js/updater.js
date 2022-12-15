@@ -27,19 +27,14 @@
             if(ni){
                 let files = await fetch("https"+services[vp]+"/bunkerFiles.txt");
                 files = await files.json();
+                alert("select bunker directory");
                 const d = await window.showDirectoryPicker();
-                const cm = await d.getFileHandle('compiled.js', { create: true });
-                const cmf = await cm.createWritable();
-                await cmf.write(c);
-                await cmf.close();
-                const lm = await d.getFileHandle('launcher.html', { create: true });
-                const lmf = await lm.createWritable();
-                await lmf.write(l);
-                await lmf.close();
-                const mn = await d.getFileHandle('manifest.json', { create: true });
-                const mnf = await mn.createWritable();
-                await mnf.write(m);
-                await mnf.close();
+                for(let i in files){
+                    const cm = await d.getFileHandle(i, { create: true });
+                    const cmf = await cm.createWritable();
+                    await cmf.write(atob(files[i]));
+                    await cmf.close();
+                }
             }
         } else {
             alert("You appear to be ahead of the most recent version");
