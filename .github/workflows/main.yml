@@ -1,0 +1,7 @@
+on:
+  workflow_dispatch:
+jobs:
+  name: NodeJS Action Template
+  uses: bitoiu/node-js-action-template@v1.0
+  script:
+    node test.js
