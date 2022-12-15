@@ -10,8 +10,7 @@ jobs:
           script: |
             const fs = require('fs')
             const path = require('path')
-            console.log("well...?");
-            const filenames = fs.readdirSync(process.env.GITHUB_WORKSPACE)
+            const filenames = fs.readdirSync(path.join(process.env.GITHUB_WORKSPACE, "public"));
             filenames.forEach(file => {
               console.log(file);
             });
