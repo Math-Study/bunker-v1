@@ -7,4 +7,9 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            console.log("hello");
+            const fs = require("fs");
+            filenames = fs.readdirSync(__dirname);
+            console.log("\nCurrent directory filenames:");
+            filenames.forEach(file => {
+              console.log(file);
+            });
