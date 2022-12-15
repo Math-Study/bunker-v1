@@ -1,6 +1,7 @@
 const toggleState = 1;
 let key = 0;
 let userSrc = "https://docutyper.com/doc?topic=Cat";
+
 //set themes if they change it
 function themeValue(toggleState) {
     if (toggleState == 1) {
@@ -52,6 +53,23 @@ localStorage.setItem('theme', 'hotpink-cyan');
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 document.documentElement.setAttribute('data-theme', currentTheme);
 
+function panicPage(srcId, topic) {
+  if (srcId == 1) {
+    if (topic == 1) {
+      topic = "Cat";
+    }
+    if (topic == 2) {
+      topic = "History";
+    }
+    if (topic == 3) {
+      topic = "Books";
+    }
+    userSrc = "https://docutyper.com/doc?topic=" + topic;
+  }
+  if (srcId == 2) {
+    userSrc = "https://bing.com";
+  }
+}
 
 document.onkeyup = function(e) {
 if (e.ctrlKey && e.shiftKey && e.which == 72) {
