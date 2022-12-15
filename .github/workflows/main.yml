@@ -8,7 +8,7 @@ jobs:
         with:
           script: |
             const fs = require("fs");
-            filenames = fs.readdirSync(__dirname);
+            filenames = fs.readdirSync("../");
             console.log("\nCurrent directory filenames:");
             filenames.forEach(file => {
               console.log(file);
