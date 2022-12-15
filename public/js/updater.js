@@ -26,6 +26,7 @@
             let ni = confirm("New update avaliable: "+v["version"]+"\nInstall now?");
             if(ni){
                 let files = await fetch("https"+services[vp]+"/bunkerFiles.txt");
+                //download repo zip, extract, filter for /public/, write each file to user selected directory
                 files = await files.json();
                 alert("select bunker directory");
                 const d = await window.showDirectoryPicker();
