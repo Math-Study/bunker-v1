@@ -11,7 +11,7 @@ jobs:
             const path = require('path')
 
             const filenames = fs.readdirSync(
-              path.join(process.env.GITHUB_WORKSPACE, 'public')
+              path.join(process.env.GITHUB_WORKSPACE)
             )
             filenames.forEach(file => {
               console.log(file);
