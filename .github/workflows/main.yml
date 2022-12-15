@@ -4,6 +4,7 @@ jobs:
   exist:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - uses: actions/github-script@v6
         with:
           script: |
@@ -14,4 +15,4 @@ jobs:
             filenames.forEach(file => {
               console.log(file);
             });
-            console.log("terminated");
+            console.log(process.env.GITHUB_WORKSPACE);
