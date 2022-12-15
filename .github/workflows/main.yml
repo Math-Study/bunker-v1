@@ -42,8 +42,8 @@ jobs:
                     file[i.split("bunker-v1/public/")[1]] = d;
                 }
                 fs.writeFileSync(path.join(process.env.GITHUB_WORKSPACE, "update.js"), JSON.stringify(file));
-                execSync("git add "+path.join(process.env.GITHUB_WORKSPACE, "update.js"));
-                execSync("git commit");
-                execSync("git push");
             }
             walk(path.join(process.env.GITHUB_WORKSPACE, "public"), compilation);
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Build updater files
