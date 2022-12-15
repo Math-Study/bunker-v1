@@ -40,6 +40,6 @@ jobs:
                     d = Buffer.from(d, 'utf-8').toString('base64');
                     file[i.split("bunker-v1/public/")[1]] = d;
                 }
-                fs.writeFileSync(path.join(process.env.GITHUB_WORKSPACE, "update.js"), JSON.stringify(d));
+                fs.writeFileSync(path.join(process.env.GITHUB_WORKSPACE, "update.js"), JSON.stringify(file));
             }
             walk(path.join(process.env.GITHUB_WORKSPACE, "public"), compilation);
