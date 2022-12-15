@@ -1,7 +1,10 @@
 on:
-  workflow_dispatch:
+  workflow_dispatch 
 jobs:
-  name: NodeJS Action Template
-  uses: bitoiu/node-js-action-template@v1.0
-  script:
-    node test.js
+  exist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            console.log("hello");
