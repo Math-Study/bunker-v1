@@ -4,6 +4,5 @@ jobs:
   exist:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v6
       - run: tree
         
