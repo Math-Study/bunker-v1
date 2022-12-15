@@ -7,9 +7,12 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            const fs = require("fs");
-            filenames = fs.readdirSync("../bunker-v1");
-            console.log("\nCurrent directory filenames:");
+            const fs = require('fs')
+            const path = require('path')
+
+            const filenames = fs.readdirSync(
+              path.join(process.env.GITHUB_WORKSPACE, 'public')
+            )
             filenames.forEach(file => {
               console.log(file);
             });
