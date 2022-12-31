@@ -690,4 +690,5 @@ text-decoration: underline;
 
   .content-wrap {
     position: relative;
+    display: inline-block;
   }
