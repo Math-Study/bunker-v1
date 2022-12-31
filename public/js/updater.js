@@ -62,7 +62,7 @@ async function attemptUpdate(){
                         await cmf.close();
                         console.log("wrote");
                     }
-                }
+                } alert("Update complete. Please refresh the page to use the new version");
                 }catch(e){
                     console.error(e);
                 }
