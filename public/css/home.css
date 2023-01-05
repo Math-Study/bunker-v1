@@ -8,6 +8,7 @@
     --heading-color: #818cab;
     --gradiant-color: linear-gradient(90deg, #5c0404 0%, #5c2424 100%);
     --main-border-color: #091585;
+    --small-font: 'sans-serif';
 }
 
 [data-theme="dark"] {
@@ -18,26 +19,29 @@
     --heading-color: #292922;
     --gradiant-color: linear-gradient(90deg, #532222 0%, #712020 100%);
     --main-border-color: red;
+    --small-font: 'sans-serif';
 }
 
 [data-theme="pink"] {
-    --primary-color: #3D2B71;
-    --secondary-color: #2D7128;
+    --primary-color: #24428a;
+    --secondary-color: #262278;
     --font-color: #b15699;
     --bg-color: #d99acd;
     --heading-color: #4f78c4;
     --gradiant-color: linear-gradient(90deg, #891574 0%, #70265c 100%);
     --main-border-color: #548ca9;
+    --small-font: 'sans-serif';
 }
 
 [data-theme="green"] {
-    --primary-color: #2A6F96;
-    --secondary-color: #712C22;
+    --primary-color: #096d08;
+    --secondary-color: #0a9e66;
     --font-color: #063810;
     --bg-color: #06b44e;
     --heading-color: #096d08;
     --gradiant-color: linear-gradient(90deg, #15894f 0%, #26703f 100%);
     --main-border-color: #a9eb4c;
+    --small-font: 'sans-serif';
 }
 
 [data-theme="dark-green"] {
@@ -48,6 +52,70 @@
     --heading-color: #3c9c3a;
     --gradiant-color: linear-gradient(90deg, #15894f 0%, #26703f 100%);
     --main-border-color: #377e40;
+    --small-font: 'sans-serif';
+}
+[data-theme="black-white"] {
+    --primary-color: #fff;
+    --secondary-color: #000000;
+    --font-color: #ffffff;
+    --bg-color: #000;
+    --heading-color: #ffffff;
+    --gradiant-color: linear-gradient(90deg, #fdfdfd 0%, #000000 100%);
+    --main-border-color: #ffffff;
+    --small-font: 'sans-serif';
+}
+[data-theme="blue-pink"] {
+    --primary-color: #2F3C7E;
+    --secondary-color: #2F3C7E;
+    --font-color: #2F3C7E;
+    --bg-color: #FBEAEB;
+    --heading-color: #2F3C7E;
+    --gradiant-color: linear-gradient(90deg, #FBEAEB 0%, #2F3C7E 100%);
+    --main-border-color: #2F3C7E;
+    --small-font: 'sans-serif';
+}
+[data-theme="charcoal-yellow"] {
+    --primary-color: #101820FF;
+    --secondary-color: #101820FF;
+    --font-color: #101820FF;
+    --bg-color: #FEE715FF;
+    --heading-color: #101820FF;
+    --gradiant-color: linear-gradient(90deg, #FEE715FF 0%, #101820FF 100%);
+    --main-border-color: #101820FF;
+    --small-font: 'sans-serif';
+
+}
+[data-theme="hotpink-cyan"] {
+    --primary-color: #FF69B4;
+    --secondary-color: #FF69B4;
+    --font-color: #FF69B4;
+    --bg-color: #00FFFF;
+    --heading-color: #FF69B4;
+    --gradiant-color: linear-gradient(90deg, #FEE715FF 0%, #00FFFF 100%);
+    --main-border-color: #FF69B4;
+    --small-font: 'sans-serif';
+
+}
+[data-theme="hotpink-cyan"] {
+    --primary-color: #FF69B4;
+    --secondary-color: #FF69B4;
+    --font-color: #FF69B4;
+    --bg-color: #00FFFF;
+    --heading-color: #FF69B4;
+    --gradiant-color: linear-gradient(90deg, #FEE715FF 0%, #00FFFF 100%);
+    --main-border-color: #FF69B4;
+    --small-font: 'sans-serif';
+
+}
+[data-theme="discord"] {
+    --primary-color: #5865F2;
+    --secondary-color: #a150f2;
+    --font-color: #7a008a;
+    --bg-color: #36393F;
+    --heading-color: #8632a4;
+    --gradiant-color: linear-gradient(90deg, #a54ea6 0%, #00FFFF 100%);
+    --main-border-color: #FF69B4;
+    --small-font: 'sans-serif';
 }
 
 
@@ -272,7 +340,7 @@ color: var(--bg-color);
 }
 
 .tile-text {
-    font-family: 'Arial';
+  font-family: 'Arial';
 font-style: normal;
 font-weight: 700;
 font-size: 32px;
@@ -315,7 +383,7 @@ main {
         scroll-behavior: smooth;
     }
 body {
-    font-family: sans-serif;
+font-family: var(--small-font);
      background: var(--bg-color);
      color: var(--font-color);
     }
@@ -360,7 +428,7 @@ ul {
 }
 
 .tile-text-1 {
-    font-family: 'Arial';
+  font-family: 'Arial';
 font-style: normal;
 font-weight: 700;
 font-size: 32px;
@@ -482,7 +550,6 @@ text-decoration: underline;
     }
 
     .tile-text-1 {
-        font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -491,7 +558,6 @@ text-decoration: underline;
     text-decoration: underline;
     }
     .tile-text {
-        font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -536,7 +602,9 @@ text-decoration: underline;
 .register-button {
     padding-right: 75px;
 }
-
+.title-stripe {
+  font-family: 'Arial';
+}
 
 .title-stripe::before {  
     transform: scaleX(0);
@@ -576,7 +644,6 @@ text-decoration: underline;
     margin: 0;
     box-sizing: border-box;
     place-content: center;
-    font-family: system-ui, sans-serif;
   }
   body {
     display: grid;

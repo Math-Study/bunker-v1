@@ -1,0 +1,37 @@
+<head>
+  <script>
+    $(window).on('load', function () {
+      $(".containerr").fadeOut("slow");
+    });
+  </script>
+  <style>
+    .containerr {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      justify-items: center;
+    }
+
+    /*This centers the loading gif*/
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transform: -webkit-translate(-50%, -50%);
+      transform: -moz-translate(-50%, -50%);
+      transform: -ms-translate(-50%, -50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="containerr" style="background: #161625;">
+    <img class="centered" src="./public/folders/lib/assets/MathStudy.gif" alt="">
+  </div>
+  <h1>Pls wait...</h1>
+  <meta http-equiv="Refresh" content="0; url='/public'" />
+</body>

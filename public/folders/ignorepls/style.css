@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.cdnfonts.com/css/baloo-da');
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: 'Baloo Da';
+  font-size: 32px;
+}
+
+.button{
+  width: 66px;
+  padding: 15px;
+  margin: 0 3px;
+  border: 2px solid black;
+  border-radius: 9px;
+  cursor: pointer;
+  font-style: bold;
+  font-family: 'Baloo Da';
+  font-size: 22px;
+}
+
+
+.row{
+  margin: 8px 0;
+}
+.row input{
+  width: 291px;
+  font-size: 20px;
+    margin: 0;
+    padding: 10px 0px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
