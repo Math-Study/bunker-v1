@@ -1,8 +1,7 @@
 async function attemptUpdate(){
     const LOCAL_VERSION = "0.0";
     const services = [
-        "://updateTest.i10.repl.co"
-        //"://math-study.github.io"
+        "://math-study.github.io"
     ];
     let v = LOCAL_VERSION;
     let vp = "";
