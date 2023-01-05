@@ -336,7 +336,6 @@ color: var(--bg-color);
 
 .wrapper-tile-1 {
 	width:100%;
-	margin-bottom: 1%;
 }
 
 .tile-text {
@@ -438,7 +437,6 @@ text-decoration: underline;
 }
 
 .center-please {
-    padding: 20px;
     float: center;
     justify-content: center;
     align-items: center;
@@ -604,6 +602,7 @@ text-decoration: underline;
 }
 .title-stripe {
   font-family: 'Arial';
+  margin: 10px;
 }
 
 .title-stripe::before {  
@@ -639,14 +638,13 @@ text-decoration: underline;
   }
   
   body {
-    min-block-size: 100%;
-    min-inline-size: 100%;
+    min-block-size: 100vh;
+    min-inline-size: 100vh;
     margin: 0;
     box-sizing: border-box;
     place-content: center;
   }
   body {
-    display: grid;
   }
   @media (orientation: landscape) {
     body {
