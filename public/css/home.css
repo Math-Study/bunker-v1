@@ -305,38 +305,90 @@ color: var(--bg-color);
     border: 5px solid #000000;
 }
 
-.gba-emu-tile {
-    width: 600px;
-    height: 70px;
-    background: #6BA263;
-    border: 3px solid #000000;
-}
-
-
 .gba-tile-wrap {
     display: table;
   margin: 0 auto;
 }
+.gba-emu-tile-1:hover {
+    transform: scale(1.1);
+  }
+
+
+  .nes-emu-tile:hover {
+    transform: scale(1.1);
+  }
+  .nds-emu-tile:hover {
+    transform: scale(1.1);
+  }
+  .snes-emu-tile:hover {
+    transform: scale(1.1);
+  }
+  .sega-emu-tile-1:hover {
+    transform: scale(1.1);
+  }
+  .more-emu-tile:hover {
+    transform: scale(1.1);
+  }
+  .rec-emu-tile:hover {
+    transform: scale(1.1);
+  }
+.rec-emu-tile {
+    width: 39vw;
+    height: 5vw;
+    background: #48b9bb;
+    border: 3px solid #000000;
+    margin-bottom: 1vw;
+    transform: scale(1.1);
+}
+
+
+.gba-tile-wrap {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gba-emu-tile-1 {
+    width: 39vw;
+    height: 5vw;
+    background: #5e5e5e;
+    border: 3px solid #000000;
+    filter: drop-shadow(8px 10px 4px rgba(1, 77, 9, 0.25));
+}
+
+
+.gba-tile-wrap-1 {
+}
 
 
 .nes-emu-tile {
-    width: 600px;
-    height: 70px;
-    background: #B54C4C;
+    width: 39vw;
+    height: 5vw;
+    background: #5e5e5e;
     border: 3px solid #000000;
+    filter: drop-shadow(8px 10px 4px rgba(126, 13, 13, 0.25));
+
 }
 
-.snes-emu-tile {
-    width: 600px;
-    height: 70px;
-    background: #e0882a;
+.sega-emu-tile-1 {
+    width: 39vw;
+    height: 5vw;
+    background: #5e5e5e;
     border: 3px solid #000000;
+    filter: drop-shadow(8px 10px 4px rgba(14, 35, 107, 0.25));
+}
+
+.more-emu-tile {
+    width: 39vw;
+    height: 5vw;
+    background: #5e5e5e;
+    border: 3px solid #000000;  
+    filter: drop-shadow(8px 10px 4px rgba(136, 138, 22, 0.25));
 }
 
 
 .wrapper-tile-1 {
 	width:100%;
-	margin-bottom: 1%;
 }
 
 .tile-text {
@@ -362,7 +414,7 @@ text-decoration: underline;
 .gba-emu-tile-1 {
     width: 600px;
     height: 70px;
-    background: #6BA263;
+    background: #5e5e5e;
     border: 3px solid #000000;
     filter: drop-shadow(8px 10px 4px rgba(1, 77, 9, 0.25));
 }
@@ -397,32 +449,6 @@ ul {
     padding: 0;
 }
 
-.nes-emu-tile {
-    width: 600px;
-    height: 70px;
-    background: #B54C4C;
-    border: 3px solid #000000;
-    filter: drop-shadow(8px 10px 4px rgba(126, 13, 13, 0.25));
-
-}
-
-.sega-emu-tile-1 {
-    width: 600px;
-    height: 70px;
-    background: #6480AB;
-    border: 3px solid #000000;
-    filter: drop-shadow(8px 10px 4px rgba(14, 35, 107, 0.25));
-}
-
-.more-emu-tile {
-    width: 600px;
-    height: 70px;
-    background: #BACF64;
-    border: 3px solid #000000;  
-    filter: drop-shadow(8px 10px 4px rgba(136, 138, 22, 0.25));
-}
-
-
 .wrapper-tile {
 	width:100%;
 }
@@ -438,149 +464,12 @@ text-decoration: underline;
 }
 
 .center-please {
-    padding: 20px;
     float: center;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-@media only screen and (max-width: 1200px) {
-    .center-please {
-        margin: auto;
-        width: 50%;
-        padding-left: 100px;
-    }
-    body {
-        color: red;
-    }
-    .center-main.side-title {
-        font-family: 'Baloo Da';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    /* identical to box height */
-    
-    text-align: center;
-    text-decoration-line: underline;
-    text-transform: uppercase;
-    color: var(--bg-color)
-    }
-    .setting-nav {
-        display: flex;
-        font-family: 'Baloo Da';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 15px;
-    /* identical to box height */
-    
-    float: left;
-    text-align: center;
-    
-    color: #FFFFFF;
-    padding: 10px;
-    }
-    
-    .info-nav {
-        display: flex;
-        font-family: 'Baloo Da';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 15px;
-    /* identical to box height */
-    
-    float: left;
-    text-align: center;
-    
-    color: #FFFFFF;
-    float: right;
-    padding: 10px;
-    }
-    .gba-emu-tile-1 {
-        width: 350px;
-        height: 40px;
-        background: #6BA263;
-        border: 3px solid #000000;
-        filter: drop-shadow(8px 10px 4px rgba(1, 77, 9, 0.25));
-    }
-    
-    
-    .nes-emu-tile {
-        width: 350px;
-        height: 40px;
-        background: #B54C4C;
-        border: 3px solid #000000;
-        filter: drop-shadow(8px 10px 4px rgba(126, 13, 13, 0.25));
-    
-    }
-    
-    .sega-emu-tile-1 {
-        width: 350px;
-        height: 40px;
-        background: #6480AB;
-        border: 3px solid #000000;
-        filter: drop-shadow(8px 10px 4px rgba(14, 35, 107, 0.25));
-    }
-    
-    .more-emu-tile {
-        width: 350px;
-        height: 40px;
-        background: #BACF64;
-        border: 3px solid #000000; 
-        filter: drop-shadow(8px 10px 4px rgba(136, 138, 22, 0.25)); 
-    }
-
-    .gba-emu-tile {
-        width: 350px;
-        height: 40px;
-        background: #6BA263;
-        border: 3px solid #000000;
-        filter: drop-shadow(8px 10px 4px rgba(1, 77, 9, 0.25));
-    }
-    
-    
-    .nes-emu-tile {
-        width: 350px;
-        height: 40px;
-        background: #B54C4C;
-        border: 3px solid #000000;
-        filter: drop-shadow(8px 10px 4px rgba(126, 13, 13, 0.25));
-    }
-
-    .tile-text-1 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    text-align: center;
-    color: #000000;
-    text-decoration: underline;
-    }
-    .tile-text {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    text-align: center;
-    color: #000000;
-    text-decoration: underline;
-    }
-    .wrapper-tile {
-        float: center;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-left: 8%;
-    }
-    .wrapper-tile-1 {
-        float: center;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-left: 8%;
-        margin-bottom: 3%;
-    }
-  }
 
 
 .register-real {
@@ -604,6 +493,7 @@ text-decoration: underline;
 }
 .title-stripe {
   font-family: 'Arial';
+  margin: 10px;
 }
 
 .title-stripe::before {  
@@ -639,14 +529,13 @@ text-decoration: underline;
   }
   
   body {
-    min-block-size: 100%;
-    min-inline-size: 100%;
+    min-block-size: 100vh;
+    min-inline-size: 100vh;
     margin: 0;
     box-sizing: border-box;
     place-content: center;
   }
   body {
-    display: grid;
   }
   @media (orientation: landscape) {
     body {
@@ -686,7 +575,7 @@ text-decoration: underline;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     inset: 0 0 0 0;
-    background: #AA4465;
+    background: #ababab;
     z-index: -1;
     transition: transform .3s ease;
   }
@@ -707,7 +596,7 @@ text-decoration: underline;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     inset: 0 0 0 0;
-    background: #D4E09B;
+    background: #ababab;
     z-index: -1;
     transition: transform .3s ease;
   }
@@ -728,7 +617,7 @@ text-decoration: underline;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     inset: 0 0 0 0;
-    background: #51344D;
+    background: #ababab;
     z-index: -1;
     transition: transform .3s ease;
   }
@@ -749,7 +638,7 @@ text-decoration: underline;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     inset: 0 0 0 0;
-    background: #D76A03;
+    background: #ababab;
     z-index: -1;
     transition: transform .3s ease;
   }
@@ -758,4 +647,28 @@ text-decoration: underline;
   .content-wrap {
     position: relative;
     display: inline-block;
+  }
+
+
+  #progress-bar {
+    width: 100%; 
+    height: 30px; 
+    background-color: #f2f2f2; 
+    border-radius: 5px; 
+  }
+  
+  #progress-bar::-webkit-progress-bar {
+    border-radius: 5px; 
+  }
+  
+  #progress-bar::-webkit-progress-value {
+    background-color: #007bff; 
+    border-radius: 5px; 
+  }
+  
+  #progress-bar-percentage {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    color:#000000;
   }
