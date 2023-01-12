@@ -33,3 +33,28 @@ function triggerDisc() {
 function triggerSave() {
     window.top.location.href = "library.html";
 }
+
+
+
+
+let inputPanic = document.getElementById("panic");
+let panicPageVal = document.getElementById("panicPageVal");
+let inputDatPanic = localStorage.getItem("panic");
+
+//check for custom panic
+if (inputDatPanic == null) {
+    console.log("No custom panic value found");
+} else {
+    console.log("Custom panic value found, loading");
+    inputPanic.value = inputDatPanic;
+    panicPageVal.innerHTML = "Custom Panic Site set!";
+}
+inputPanic.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        console.log(inputPanic.value);
+        panicPage(1,4);
+       let panicValue = inputPanic.value;
+    localStorage.setItem("panic", panicValue);
+    panicPageVal.innerHTML = "Custom Panic Site set!";
+        }
+});

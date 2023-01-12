@@ -58,6 +58,9 @@ function themeValue(toggleState) {
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 document.documentElement.setAttribute('data-theme', currentTheme);
 
+
+
+
 function panicPage(srcId, topic) {
   if (srcId == 1) {
     if (topic == 1) {
@@ -69,27 +72,32 @@ function panicPage(srcId, topic) {
     if (topic == 3) {
       topic = "Books";
     }
+    if (topic == 4) {
+      topic = inputPanic.value;
+    }
     userSrc = "https://docutyper.com/doc?topic=" + topic;
   }
   if (srcId == 2) {
     userSrc = "https://bing.com";
   }
+  localStorage.setItem('userSrc', userSrc);
 }
 
 document.onkeyup = function(e) {
   if (e.ctrlKey && e.shiftKey && e.which == 72) {
-    console.log("key is 0")
+    console.log("ctrl+shift+h has been pressed")
     if (key == 2) {
       document.body.removeChild(document.body.lastChild);
       key = 0;
+      console.log("key was 2, now 0: removed iframe");
     } else {
       key = 1;
-      console.log("key is 1");
+      console.log("key was 0, now 1");
     }
     if (key == 1) {
-      console.log("key is 1");
+      console.log("key is 1: adding iframe");
       var ifrm = document.createElement("iframe");
-      ifrm.setAttribute("src", userSrc);
+      ifrm.setAttribute("src", localStorage.getItem('userSrc')); 
       ifrm.style.width = "100%";
       ifrm.style.height = "100%";
       ifrm.style.zIndex = "999999";
