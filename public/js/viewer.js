@@ -1,5 +1,6 @@
 let viewer = document.getElementById("viewer");
 let searchBar = document.getElementById("searchBar");
+let extSearch = document.getElementById("extSearch");
 let startup = localStorage.getItem("startup");
 
 //load startup site
@@ -17,6 +18,13 @@ searchBar.addEventListener('keypress', function (e) {
         console.log(searchBar.value);
         viewer.src = searchBar.value;
         viewer.style.display = "block";
+        }
+});
+
+extSearch.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        console.log(extSearch.value);
+        window.open(extSearch.value + "?palmbeach.k12.fl.us", "_blank");
         }
 });
 

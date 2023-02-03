@@ -40,21 +40,23 @@
     </nav>
     <div class="wrap">
         <div class="search">
-           <input id="searchBar" type="text" class="searchTerm" placeholder="What site do you wish to go to?">
+           <input id="extSearch" type="text" class="searchTerm" placeholder="What site do you wish to unblock?">
         </div>
      </div>
+
+     <h1>This is a in-progress exploit being investigated by the team @ MSG. It only works in Palm Beach County, FL.</h1>
 <div class="content-wrap" style="z-index: 9999; position: absolute;"> <h2 id="status" class="online-status"> Online Status: Online </h2> </div>
 
-<iframe sandbox="allow-modals allow-top-navigation allow-same-origin allow-scripts allow-popups allow-forms"  class="notes" id="viewer" src="https://seal.thecelestial.org/" style="position:fixed; top:10; left:0; bottom:0; right:0; width:100%; height:90%; border:none; margin:0; padding:0; z-index:0;">
-    Your browser doesn't support iframes
-</iframe>
 
-<h1> Enter proxy link in search bar in the top left</h1>
+<h1> Enter site link in search bar in the top left to attempt to unblock it.</h1>
+
+<p>Drag the below link to your bookmark bar as a bookmarklet to use after opening a site with the viewer above. (You may have to use Edge if bookmarklets are blocked) </p>
+<a style="text-decoration: underline;" href="javascript:var%20%24jscomp%3D%24jscomp%7C%7C%7B%7D%3B%24jscomp.scope%3D%7B%7D%3B%24jscomp.createTemplateTagFirstArg%3Dfunction(b)%7Breturn%20b.raw%3Db%7D%3B%24jscomp.createTemplateTagFirstArgWithRaw%3Dfunction(b%2Ca)%7Bb.raw%3Da%3Breturn%20b%7D%3Bvar%20isDistrict1%3Dwindow.location.href.includes(%22palmbeach.k12.fl.us%22)%3BisDistrict1%26%26updateLinks(%22palmbeach.k12.fl.us%22)%3Bfunction%20updateLinks(b)%7Bdocument.querySelectorAll(%22%5Bhref%5D%2C%20%5Bsrc%5D%22).forEach(function(a)%7Bif(a.hasAttribute(%22href%22))%7Bvar%20c%3Da.getAttribute(%22href%22)%3Bc%26%26!c.includes(b)%26%26(a.href%2B%3D%22%3F%22%2Bb%2Cconsole.log(%22Updated%20link%20href%3A%20%22%2Ba.href))%7Delse%20a.hasAttribute(%22src%22)%26%26(c%3Da.getAttribute(%22src%22))%26%26!c.includes(b)%26%26(a.src%2B%3D%22%3F%22%2Bb%2Cconsole.log(%22Updated%20src%3A%20%22%2Ba.src))%7D)%7D%3Bvoid+0">Page-Unblocker</a>
 
 
 
     </body> 
-        
+       <p id="searchBar"></p> 
     <script src="../../js/theme.js"></script>
     <script src="../../js/status.js"></script>
     <script src="../../js/viewer.js"></script>

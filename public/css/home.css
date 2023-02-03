@@ -412,8 +412,8 @@ text-decoration: underline;
 }
 
 .gba-emu-tile-1 {
-    width: 600px;
-    height: 70px;
+  width: 39vw;
+  height: 5vw;
     background: #5e5e5e;
     border: 3px solid #000000;
     filter: drop-shadow(8px 10px 4px rgba(1, 77, 9, 0.25));
