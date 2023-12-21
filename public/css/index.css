@@ -345,10 +345,11 @@ color: var(--bg-color);
     font-family: var(--small-font);
 font-style: normal;
 font-weight: 700;
-font-size: 32px;
+font-size: 3vw;
 text-align: center;
 color: #000000;
 text-decoration: underline;
+margin-top: 1vh;
 }
 
 .display-wrapper-1 .gba-tile-wrap {
@@ -432,10 +433,11 @@ ul {
 .tile-text-1 {
 font-style: normal;
 font-weight: 700;
-font-size: 32px;
+font-size: 3vw;
 text-align: center;
 color: #000000;
 text-decoration: underline;
+padding-top: 1vh;
 }
 
 .center-please {
@@ -553,7 +555,7 @@ text-decoration: underline;
     .tile-text-1 {
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 3vw;
     text-align: center;
     color: #000000;
     text-decoration: underline;
@@ -561,7 +563,7 @@ text-decoration: underline;
     .tile-text {
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 3vw;
     text-align: center;
     color: #000000;
     text-decoration: underline;

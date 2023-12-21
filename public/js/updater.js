@@ -55,7 +55,7 @@ async function attemptUpdate(){
             let dir = {};
             for(let i in k){
               if(k[i].filename.indexOf("/public/") != -1 && k[i].filename.split("/public/")[1] != "" && k[i].filename[k[i].filename.length-1] != "/"){
-                let name = k[i].filename.replace("bunker-v1-main/public/", "");
+                let name = k[i].filename.replace("bunker-v1-main/public", "");
                 let dirs = name.split("/");
                 let filename;
                 let targetDirectoryHandle = d;

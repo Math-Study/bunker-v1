@@ -392,14 +392,13 @@ color: var(--bg-color);
 }
 
 .tile-text {
-  font-family: 'Arial';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-text-align: center;
-color: #000000;
-text-decoration: underline;
-}
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2vw;
+  text-align: center;
+  color: #000000;
+  text-decoration: underline;
+  }
 
 .display-wrapper-1 .gba-tile-wrap {
 
@@ -454,14 +453,13 @@ ul {
 }
 
 .tile-text-1 {
-  font-family: 'Arial';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-text-align: center;
-color: #000000;
-text-decoration: underline;
-}
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2vw;
+  text-align: center;
+  color: #000000;
+  text-decoration: underline;
+  }
 
 .center-please {
     float: center;
